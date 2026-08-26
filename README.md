@@ -25,7 +25,7 @@ Network-Traffic-Classifier/
 │ └── generate_data.py # synthetic data generation + training
 ├── models/
 │ └── RFC.joblib # trained model (generated, not committed)
-├── api.py # Flask API serving predictions
+├── app.py # Flask API serving predictions
 ├── requirements.txt
 └── README.md
 
@@ -36,7 +36,7 @@ python -m venv .venv
 .venv\Scripts\Activate.ps1        # Windows
 pip install -r requirements.txt
 python data/generate_data.py      # generates data, trains model, saves to models/
-python api.py                     # starts the API on localhost:5000
+python app.py                     # starts the API on localhost:5000
 ```
 
 ## Example request
