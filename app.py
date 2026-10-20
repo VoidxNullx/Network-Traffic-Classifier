@@ -51,8 +51,7 @@ def predict():
         connection_count = float(data["connection_count"])
     except (KeyError, TypeError, ValueError):
         return jsonify({"error": "Invalid input"}), 400
-    if not (math.isfinite(duration) and math.isfinite(connection_count)) \
-            or duration < 0 or connection_count < 0:
+    if not (math.isfinite(duration) and math.isfinite(connection_count)):
         return jsonify({"error": "Invalid input"}), 400
 
     row = pd.DataFrame({
